@@ -7,9 +7,15 @@ setup(
     description="image mask",
     python_requires=">=3.10",
     packages=find_packages(),
-    package_data = {
+    package_data={
         "": ["*"],
     },
+    install_requires=[
+        "opencv-python",
+        "click",
+        "black",
+        "mypy",
+    ],
     entry_points={
         "console_scripts": [
             "mask=mask.__main__:main",
